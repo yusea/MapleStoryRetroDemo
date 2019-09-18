@@ -1,0 +1,53 @@
+CXX = g++
+
+# Warnings frequently signal eventual errors:
+CXXFLAGS=`sdl2-config --cflags` -g -W -Wall -Werror -std=c++11 -Weffc++ -Wextra -pedantic -O0 -I `sdl2-config --prefix`/include/
+
+LDFLAGS = `sdl2-config --libs` -lm -lexpat -lSDL2_ttf -lSDL2_image
+
+DEPDIR := .deps
+SRCPTH = $(shell find . -regex ".*\.cpp" | tr '\n' ' ')
+SRCFLS = $(notdir $(SRCPTH))
+OBJDIR  = build
+$(shell mkdir -p $(OBJDIR) >/dev/null)
+OBJFLS = $(patsubst %.cpp, $(OBJDIR)/%.o, $(SRCFLS))
+
+
+# OBJS = \
+#   renderContext.o \
+# 	ioMod.o \
+# 	parseXML.o \
+# 	gameData.o \
+# 	viewport.o \
+# 	world.o \
+# 	spriteSheet.o \
+# 	image.o \
+# 	imageFactory.o \
+# 	frameGenerator.o \
+# 	sprite.o \
+# 	multisprite.o \
+# 	twowayMultisprite.o \
+
+# 	vector2f.o \
+# 	clock.o \
+# 	engine.o \
+# 	main.o 
+
+
+# OBJS = $(shell find . -regex ".*\.cpp" -printf "%P " | sed 's/.cpp/.o/g')
+
+EXEC = run
+
+%.o: %.cpp %.h
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+# $(EXEC): $(OBJS)
+# 	$(CXX) $(CXXFLAGS) -o $@ $(OBJS) $(LDFLAGS)
+
+$(EXEC): $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $@ $(OBJFLS) $(LDFLAGS)
+
+clean:
+	rm -rf $(OBJS)
+	rm -rf $(EXEC)
+	rm -rf frames/*.bmp

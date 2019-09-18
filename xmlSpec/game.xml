@@ -1,0 +1,197 @@
+<?xml version = "1.0"?>
+<GameData>
+<!-- screenTitle is also used to identify you and your animation. 
+     So make sure to include your name as part of the screenTitle -->
+<title>The Yu Maple Story Demo</title>
+<maxStringSize>50</maxStringSize>
+
+<frameCapOn>true</frameCapOn>
+<period>17</period>
+
+<maxFrames>300</maxFrames>
+<username>malloy</username>
+
+<view>
+  <width>700</width>
+  <height>420</height>
+  <loc x="30" y="30"/>
+</view>
+
+<world>
+  <width>2200</width>
+  <height>450</height>
+</world>
+
+<back>
+  <file>assets/feiqidushi.jpg</file>
+  <factor>1</factor>
+  <transparency>false</transparency>
+</back>
+
+<cloud>
+  <file>assets/cloud2.png</file>
+  <factor>1</factor>
+  <transparency>false</transparency>
+</cloud>
+
+
+<font name="font">
+  <file>fonts/arial.ttf</file>
+  <size>16</size>
+  <red>160</red>
+  <green>82</green>
+  <blue>45</blue>
+  <alpha>0</alpha>
+</font>
+
+
+<mychar>
+  <file>assets/mychar/mychar.png</file>
+  <startLoc x="50" y="340"/>
+  <number>1</number>
+  <frames>1</frames>
+  <frameInterval>50</frameInterval>
+  <speedX>200</speedX>
+  <speedY>300</speedY>
+  <attackRange>200</attackRange>
+  <transparency>ture</transparency>
+  <jump>
+        <file>assets/mychar/mychar.png</file>
+        <height>100</height>
+        <transparency>false</transparency>
+  </jump>
+  <shoot>
+        <file>assets/mychar/mychar_attack.png</file>
+        <transparency>false</transparency>
+        <interval>300</interval>
+  </shoot>
+
+  <walk>
+      <file>assets/mychar/mychar.png</file>
+      <transparency>false</transparency>
+      <frames>1</frames>
+      <frameInterval>50</frameInterval>
+  </walk>
+  <idle>
+      <file>assets/mychar/mychar.png</file>
+      <transparency>false</transparency>
+  </idle>
+  <crouch>
+      <file>assets/mychar/mychar.png</file>
+      <transparency>false</transparency>
+  </crouch>
+  <jumpShoot>
+      <file>assets/mychar/mychar_attack.png</file>
+      <transparency>false</transparency>
+  </jumpShoot>
+  <chunk>
+      <size>32</size>
+      <distance>50</distance>
+  </chunk>
+</mychar>
+
+<magic_cross>
+    <file>assets/attack_skill.png</file>
+    <number>3</number>
+    <startLoc x="1500" y="450"/>
+    <frames>1</frames>
+    <frameInterval>100</frameInterval>
+    <speedX>0</speedX>
+    <speedY>0</speedY>
+    <speed>600</speed>
+    <safeDistance>60</safeDistance>
+    <speedScale>2.5</speedScale>
+    <speedScaleTicks>200</speedScaleTicks>
+    <transparency>false</transparency>
+    <chunk>
+        <size>200</size>
+        <distance>50</distance>
+    </chunk>
+</magic_cross>
+
+<yellow_mushroom>
+    <file>assets/yellow_mushroom.png</file>
+    <number>6</number>
+    <startLoc x="1000" y="290"/>
+    <frames>5</frames>
+    <frameInterval>200</frameInterval>
+    <speedX>100</speedX>
+    <speedY>0</speedY>
+    <transparency>false</transparency>
+    <safeDistance>250</safeDistance>
+    <speedScale>1.7</speedScale>
+    <speedScaleTicks>400</speedScaleTicks>
+    <chunk>
+        <size>32</size>
+        <distance>50</distance>
+    </chunk>
+</yellow_mushroom>
+
+<zombie_mushroom>
+    <file>assets/zombie_mushroom.png</file>
+    <number>3</number>
+    <startLoc x="700" y="350"/>
+    <frames>4</frames>
+    <frameInterval>200</frameInterval>
+    <speedX>130</speedX>
+    <speedY>0</speedY>
+    <transparency>false</transparency>
+    <safeDistance>300</safeDistance>
+    <speedScale>2.2</speedScale>
+    <speedScaleTicks>900</speedScaleTicks>
+    <chunk>
+        <size>32</size>
+        <distance>50</distance>
+    </chunk>
+</zombie_mushroom>
+
+
+
+<RedSnail>
+    <file>assets/RedSnail.png</file>
+    <number>5</number>
+    <startLoc x="900" y="375"/>
+    <frames>4</frames>
+    <frameInterval>100</frameInterval>
+    <speedX>30</speedX>
+    <speedY>0</speedY>
+    <transparency>false</transparency>
+    <safeDistance>300</safeDistance>
+    <speedScale>5</speedScale>
+    <speedScaleTicks>200</speedScaleTicks>
+    <chunk>
+        <size>32</size>
+        <distance>50</distance>
+    </chunk>
+</RedSnail>
+
+<HUD>
+    <alpha>150</alpha>
+    <posX>10</posX>
+    <posY>10</posY>
+    <width>280</width>
+    <numOfLines>8</numOfLines>
+    <interval>25</interval>
+    <line1>Press I to show / hide HUD</line1>
+    <line2>Press P to pause / return</line2>
+    <line3>Press AWSD to move</line3>
+    <line4>Press M to change collision strategy</line4>
+    <line5>Kill all monster to Win</line5>
+    <line6>Press G to turn on the GOD mode</line6>
+    <line7>Press R to restart</line7>
+    <line8>Be Care of Zombie Mushrooms !</line8>
+
+    
+</HUD>
+
+<InfoHUD>
+    <alpha>150</alpha>
+    <posX>400</posX>
+    <posY>10</posY>
+    <width>250</width>
+    <numOfLines>6</numOfLines>
+    <interval>30</interval>
+</InfoHUD>
+
+
+</GameData>
